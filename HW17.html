@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>using html, css ensures that an element self-clears its children</title>
+</head>
+<style>
+   .self-clears::after{
+    content: '';
+    display: block;
+    clear: both;
+   } 
+   .ok{
+    float: left;
+    padding: 4px;
+   }
+</style>
+<body>
+    <div class="self-clears">
+        <div class="ok">1st Item</div>
+        <div class="ok">2nd Item</div>
+        <div class="ok">3rd Item</div>
+    </div>
+</body>
+</html>
